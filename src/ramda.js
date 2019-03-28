@@ -11,9 +11,7 @@ console.log({
 
 
 // __ placeholder.
-const greet = (a, b) => compose(
-  replace('{name}', __, a),
-  replace('{surname}', __)
-)(b)
+// https://ramdajs.com/docs/#__
+const greet = replace('{name}', __, 'Hello, {name}!')
 
-greet('Alice', 'asdad') // -> 'Hello, Alice!'
+greet('Alice') // -> 'Hello, Alice!'
